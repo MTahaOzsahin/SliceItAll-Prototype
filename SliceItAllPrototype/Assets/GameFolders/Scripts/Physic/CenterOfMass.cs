@@ -16,15 +16,16 @@ namespace SliceItAll.Scripts.Physic
         private void Start()
         {
             objectsRigibody.centerOfMass = centerOfMass;
+            Application.targetFrameRate = 60;
         }
-        //private void FixedUpdate()
-        //{
-        //    objectsRigibody.centerOfMass = centerOfMass;
-        //}
+        private void FixedUpdate()
+        {
+            objectsRigibody.centerOfMass = centerOfMass;
+        }
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(transform.position + transform.rotation * centerOfMass, 1f);
+            Gizmos.DrawSphere(transform.position + transform.rotation * centerOfMass, 0.3f);
         }
     }
 }
