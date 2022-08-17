@@ -1,3 +1,4 @@
+using SliceItAll.Scripts.Physic;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,17 @@ using UnityEngine.InputSystem;
 
 namespace SliceItAll.Scripts.GamePlay
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class Mover : MonoBehaviour
     {
         ///<Summary>
         ///This is where we move our gameobjects.
         /// </Summary>
         /// 
+
+        public PhysicVariables physicVariables;
         [SerializeField] InputAction inputAction;
 
-        [SerializeField] float rotateForce;
-        [SerializeField] float elevationForce;
-        [SerializeField] float lerpVariable = 0.2f;
-
-        Rigidbody rb;
-
-        private void Awake()
-        {
-            rb = GetComponent<Rigidbody>();
-        }
         private void OnEnable()
         {
             inputAction.Enable();
@@ -33,49 +27,56 @@ namespace SliceItAll.Scripts.GamePlay
             inputAction.started -= MoveAction;
             inputAction.Disable();
         }
+
+        Rigidbody rb;
+
+        private void Awake()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        
         private void Start()
         {
+            Application.targetFrameRate = 30;
             rb.maxAngularVelocity = 25f;
         }
         private void FixedUpdate()
         {
-            RotationCheck();
+            MovementAdjustment();
         }
-        void MoveAction(InputAction.CallbackContext context)
+        public void MoveAction(InputAction.CallbackContext context)
         {
-
-            StartCoroutine(Rotation());
-            Debug.Log("Tapped");
+            StartCoroutine(Movement());
         }
-        IEnumerator Rotation()
+        IEnumerator Movement()
         {
-            float vectorDot = Vector3.Dot(Vector3.forward, transform.position.normalized);
+            rb.velocity = Vector3.zero;
             float timeElapsed = 0f;
             while (timeElapsed < 0.3f)
             {
                 timeElapsed += Time.deltaTime;
-                rb.velocity = Vector3.zero;
-                rb.AddTorque((new Vector3(1f, 0, 0) * rotateForce * 1000f * Time.fixedDeltaTime));
-                //rb.AddForce(Vector3.up * elevationForce * 100f * Time.fixedDeltaTime);
-                rb.velocity = Vector3.up * elevationForce * 100f * Time.fixedDeltaTime;
+                rb.AddTorque(transform.right * physicVariables.rotateForce * 1000f * Time.fixedDeltaTime);
+
+                rb.AddForce(Vector3.up * physicVariables.elevationForce * 100f * Time.fixedDeltaTime);
+                rb.AddForce(Vector3.forward * physicVariables.movementForce * 100f * Time.fixedDeltaTime);
             }
             yield return null;
         }
         
-        void RotationCheck() 
+        void MovementAdjustment() 
         {
-           
-            float vectorDot = Vector3.Dot(Vector3.forward, transform.position.normalized);
-            if (vectorDot < 0.45f)
+            Physics.gravity = new Vector3(0f, -physicVariables.fakeGravity, 0f);
+
+            float vectorDot = Vector3.Dot(Vector3.forward, transform.forward);
+            if (vectorDot > 0.45f )
             {
-                Debug.Log("a");
-                rb.angularDrag = 1.3f;
-                rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, Vector3.zero, lerpVariable);
+                rb.angularDrag = physicVariables.angularDrag;
+                rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, Vector3.zero, physicVariables.lerpValue);
                 rb.angularVelocity = new Vector3(rb.angularVelocity.x, 0f, 0f);
             }
             else
             {
-                rb.angularDrag = 0f;
+                rb.angularDrag = 0;
             }
         }
         
