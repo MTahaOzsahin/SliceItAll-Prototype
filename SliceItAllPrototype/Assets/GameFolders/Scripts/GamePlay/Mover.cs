@@ -14,7 +14,7 @@ namespace SliceItAll.Scripts.GamePlay
         /// </Summary>
         /// 
 
-        public PhysicVariables physicVariables;
+        public BasePhysicVariables moverPhysicVariables;
         [SerializeField] InputAction inputAction;
 
         private void OnEnable()
@@ -40,10 +40,6 @@ namespace SliceItAll.Scripts.GamePlay
             Application.targetFrameRate = 30;
             rb.maxAngularVelocity = 25f;
         }
-        private void FixedUpdate()
-        {
-            MovementAdjustment();
-        }
         public void MoveAction(InputAction.CallbackContext context)
         {
             StartCoroutine(Movement());
@@ -55,30 +51,12 @@ namespace SliceItAll.Scripts.GamePlay
             while (timeElapsed < 0.3f)
             {
                 timeElapsed += Time.deltaTime;
-                rb.AddTorque(transform.right * physicVariables.rotateForce * 1000f * Time.fixedDeltaTime);
+                rb.AddTorque(transform.right * moverPhysicVariables.rotateForce * 1000f * Time.fixedDeltaTime);
 
-                rb.AddForce(Vector3.up * physicVariables.elevationForce * 100f * Time.fixedDeltaTime);
-                rb.AddForce(Vector3.forward * physicVariables.movementForce * 100f * Time.fixedDeltaTime);
+                rb.AddForce(Vector3.up * moverPhysicVariables.elevationForce * 100f * Time.fixedDeltaTime);
+                rb.AddForce(Vector3.forward * moverPhysicVariables.movementForce * 100f * Time.fixedDeltaTime);
             }
             yield return null;
         }
-        
-        void MovementAdjustment() 
-        {
-            Physics.gravity = new Vector3(0f, -physicVariables.fakeGravity, 0f);
-
-            float vectorDot = Vector3.Dot(Vector3.forward, transform.forward);
-            if (vectorDot > 0.45f )
-            {
-                rb.angularDrag = physicVariables.angularDrag;
-                rb.angularVelocity = Vector3.Lerp(rb.angularVelocity, Vector3.zero, physicVariables.lerpValue);
-                rb.angularVelocity = new Vector3(rb.angularVelocity.x, 0f, 0f);
-            }
-            else
-            {
-                rb.angularDrag = 0;
-            }
-        }
-        
     }
 }

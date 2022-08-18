@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace SliceItAll.Scripts.Physic
 {
-    [CreateAssetMenu]
-    public class PhysicVariables : ScriptableObject
+    public  class BasePhysicVariables : ScriptableObject
     {
+        [Header("Physics Variables")]
         [Tooltip("How much rotation force will use when tap. Default = 10")]
         public float rotateForce;
 
