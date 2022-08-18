@@ -95,10 +95,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6133396189899415547}
-  - component: {fileID: 3355478286834854449}
   - component: {fileID: 7958956405708501276}
   - component: {fileID: 3308768800752062634}
   - component: {fileID: 3894025238694481147}
+  - component: {fileID: 905027281}
+  - component: {fileID: 905027274}
+  - component: {fileID: 905027275}
+  - component: {fileID: 905027280}
   m_Layer: 0
   m_Name: Kitchen Knife
   m_TagString: Untagged
@@ -122,37 +125,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3355478286834854449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5821585389471052830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fccbe1c28ae45c649ab8207a9e997922, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputAction:
-    m_Name: Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5fa90855-5c59-4f50-8ee3-2c755d315b8c
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: ad7cf2d1-cebe-444c-9510-61cfc2eff2b9
-      m_Path: <Touchscreen>/Press
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input
-      m_Flags: 0
-    m_Flags: 0
-  force: 10
-  lerpVariable: 0.2
 --- !u!54 &7958956405708501276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,9 +133,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5821585389471052830}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 1.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -195,3 +167,73 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14918542, y: 0.34361398, z: 1.508806}
   m_Center: {x: 0.0027739964, y: 0.016025156, z: -0.6042142}
+--- !u!114 &905027281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389b17ad3e761be43b8eda6a303495aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePhysicVariables: {fileID: 11400000, guid: 6fc4caf9497ee9c45b29bf0201044b4f, type: 2}
+  inputAction:
+    m_Name: Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b50494f7-3a28-4315-8cb2-3c3992147d70
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 231b7a73-b1d1-4386-97c7-57ad5ce609cf
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &905027274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d59a5898a30e24a8d36ba2104b2f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: {fileID: 11400000, guid: e8164c2cd1a6ae44fb9b7bdf605a6b2e, type: 2}
+--- !u!114 &905027275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea0d6df05231b340b293dd4119a735c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dotUp: 0
+  dotForward: 0
+  area: 0
+--- !u!114 &905027280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67531c54fca0db54bb29a511743b0023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

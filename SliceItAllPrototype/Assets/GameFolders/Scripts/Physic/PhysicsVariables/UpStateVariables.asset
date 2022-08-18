@@ -16,5 +16,6 @@ MonoBehaviour:
   elevationForce: 0
   movementForce: 0
   lerpValue: 0
+  maxAngularVelocity: 25
   angularDrag: 3
   fakeGravity: 15

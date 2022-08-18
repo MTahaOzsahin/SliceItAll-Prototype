@@ -6,8 +6,8 @@ namespace SliceItAll.Scripts.Controllers
 {
     public class AreaController : MonoBehaviour
     {
-        public float dotUp;
-        public float dotForward;
+        float dotUp;
+        float dotForward;
 
         public enum Area { Up, Right, Down, Left };
         public Area area;

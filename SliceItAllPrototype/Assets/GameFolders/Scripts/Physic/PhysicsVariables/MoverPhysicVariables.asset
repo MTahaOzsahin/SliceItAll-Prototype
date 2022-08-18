@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: MoverPhysicVariables
   m_EditorClassIdentifier: 
   rotateForce: 10
-  elevationForce: 30
-  movementForce: 4
+  elevationForce: 250
+  movementForce: 30
   lerpValue: 0
+  maxAngularVelocity: 25
   angularDrag: 0
   fakeGravity: 0
+  stappedMovement: 15000
