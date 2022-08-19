@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f5914e55a9e744bf96bd374de90d1, type: 3}
   m_Name: UpStateVariables
   m_EditorClassIdentifier: 
-  rotateForce: 0
+  rotateForce: 30
   elevationForce: 0
   movementForce: 0
   lerpValue: 0
   maxAngularVelocity: 25
-  angularDrag: 3
+  angularDrag: 1
   fakeGravity: 15
+  stappedMovement: 0

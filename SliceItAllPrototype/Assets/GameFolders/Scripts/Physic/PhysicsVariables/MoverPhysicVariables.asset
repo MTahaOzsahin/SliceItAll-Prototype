@@ -19,4 +19,4 @@ MonoBehaviour:
   maxAngularVelocity: 25
   angularDrag: 0
   fakeGravity: 0
-  stappedMovement: 15000
+  stappedMovement: 1500

@@ -14,7 +14,6 @@ namespace SliceItAll.Scripts.FSM.Actions
             var rb = stateController.GetComponent<Rigidbody>();
             Physics.gravity = new Vector3(0f, 0f, 0f);
             rb.maxAngularVelocity = basePhysicVariables.maxAngularVelocity;
-            rb.velocity = Vector3.zero;
         }
     }
 }
