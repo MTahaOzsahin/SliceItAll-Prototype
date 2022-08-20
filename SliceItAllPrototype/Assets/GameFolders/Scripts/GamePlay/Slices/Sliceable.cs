@@ -10,6 +10,9 @@ namespace SliceItAll.Scripts.GamePlay.Slices
 
     public class Sliceable : MonoBehaviour
     {
+        [Tooltip("How much score will gain when slice this object")]
+        public int score;
+
         [SerializeField]
         private bool isSolid = true;
 

@@ -1,3 +1,4 @@
+using SliceItAll.Scripts.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace SliceItAll.Scripts.GamePlay.Slices
     /// </summary>
     public class Knife : MonoBehaviour
     {
+        [SerializeField] ScoreManager scoreManager;
+
         [SerializeField, Tooltip("The empty game object located at the tip of the blade")]
         GameObject tip = null;
 
@@ -85,6 +88,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
 
             rigidbodyPositive.velocity = new Vector3(-1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
             rigidbodyNegative.velocity = new Vector3(1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
+            scoreManager.HandleScore(other.gameObject.GetComponent<Sliceable>().score,other.gameObject.transform.position);
         }
     }
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b0bde06ddf5449ba709cb7e086b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 100
   isSolid: 1
   reverseWindTriangles: 0
   useGravity: 1
