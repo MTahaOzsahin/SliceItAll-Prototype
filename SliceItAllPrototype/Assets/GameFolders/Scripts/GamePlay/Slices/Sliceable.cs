@@ -84,5 +84,12 @@ namespace SliceItAll.Scripts.GamePlay.Slices
                 smoothVertices = value;
             }
         }
+        private void Update()
+        {
+            if (transform.position.y < -30f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

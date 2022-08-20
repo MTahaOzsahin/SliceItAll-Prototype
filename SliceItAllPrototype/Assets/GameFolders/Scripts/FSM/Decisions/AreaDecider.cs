@@ -18,7 +18,7 @@ namespace SliceItAll.Scripts.FSM.Decisions
         public override bool StappedCheck(StateController stateController)
         {
             var colliderController = stateController.GetComponent<ColliderController>();
-            return colliderController.IsCollide;
+            return colliderController.IsCollideWithFloor;
         }
     }
 }

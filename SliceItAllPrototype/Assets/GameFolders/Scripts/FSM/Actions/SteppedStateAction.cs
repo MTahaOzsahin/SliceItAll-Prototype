@@ -12,7 +12,7 @@ namespace SliceItAll.Scripts.FSM.Actions
         {
             Debug.Log("Stepped");
             var rb = stateController.GetComponent<Rigidbody>();
-            Physics.gravity = new Vector3(0f, 0f, 0f);
+            Physics.gravity = new Vector3(0f, -9.8f, 0f);
             rb.maxAngularVelocity = basePhysicVariables.maxAngularVelocity;
         }
     }

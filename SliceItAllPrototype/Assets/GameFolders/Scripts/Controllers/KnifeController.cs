@@ -12,9 +12,10 @@ namespace SliceItAll.Scripts.Controllers
     {
         IMover mover;
         ColliderController colliderController;
+        DistanceController distanceController;
 
         [Tooltip("Physics variables that will use to move")]
-        public BasePhysicVariables basePhysicVariables;
+        public BasePhysicVariables moverPhysicVariables;
         Rigidbody rb;
         [SerializeField] InputAction inputAction;
 
@@ -22,22 +23,25 @@ namespace SliceItAll.Scripts.Controllers
         {
             rb = GetComponent<Rigidbody>();
             colliderController = GetComponent<ColliderController>();
-            mover = new Mover(this,basePhysicVariables, rb);
+            distanceController = GetComponent<DistanceController>();
+            mover = new Mover(this,moverPhysicVariables, rb);
         }
         private void OnEnable()
         {
             inputAction.Enable();
             inputAction.started += MoveAction;
+            colliderController.CollideWithSliceable += StepBack;
         }
         private void OnDisable()
         {
             inputAction.started -= MoveAction;
+            colliderController.CollideWithSliceable -= StepBack;
             inputAction.Disable();
         }
 
         void MoveAction(InputAction.CallbackContext context)
         {
-            if (colliderController.IsCollide)
+            if (colliderController.IsCollideWithFloor || distanceController.DistanceToBelow())
             {
                 StartCoroutine(mover.StappedCoroutine());
             }
@@ -45,6 +49,10 @@ namespace SliceItAll.Scripts.Controllers
             {
                 StartCoroutine(mover.MovementCoroutine());
             }
+        }
+        void StepBack()
+        {
+            StartCoroutine(mover.StappedCoroutine());
         }
     }
 }

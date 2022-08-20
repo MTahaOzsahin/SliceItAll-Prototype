@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateForce: 10
   elevationForce: 250
-  movementForce: 30
+  movementForce: 50
   lerpValue: 0
   maxAngularVelocity: 25
   angularDrag: 0
   fakeGravity: 0
-  stappedMovement: 1500
+  stappedMovement: 25

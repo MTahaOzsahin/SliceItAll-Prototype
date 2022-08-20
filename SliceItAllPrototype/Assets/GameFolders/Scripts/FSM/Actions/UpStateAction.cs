@@ -16,6 +16,11 @@ namespace SliceItAll.Scripts.FSM.Actions
             rb.maxAngularVelocity = basePhysicVariables.maxAngularVelocity;
             rb.angularDrag = basePhysicVariables.angularDrag;
             rb.AddTorque(Vector3.right * basePhysicVariables.rotateForce  * Time.fixedDeltaTime);
+            if (rb.angularVelocity.x > 8f)
+            {
+                rb.angularVelocity = (new Vector3(8f, 0f, 0f));
+
+            }
         }
     }
 }

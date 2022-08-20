@@ -88,37 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4282061430978094886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 507159419436419879}
-  m_Layer: 0
-  m_Name: Trail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &507159419436419879
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4282061430978094886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6133396189899415547}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5821585389471052830
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +125,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1150809345657272379}
-  - {fileID: 507159419436419879}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,11 +152,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5821585389471052830}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.096416295, y: 0.5063785, z: 2.7843816}
-  m_Center: {x: -0.008003533, y: -0.059424907, z: 1.5768958}
+  m_Size: {x: 0.096416295, y: 0.049134254, z: 2.7843816}
+  m_Center: {x: -0.008003533, y: -0.03260517, z: 1.5768958}
 --- !u!65 &3894025238694481147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -282,13 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ecbc803b9b7a447905acb62bb87be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife: {fileID: 0}
-  tip: {fileID: 0}
-  _base: {fileID: 0}
-  meshParent: {fileID: 0}
-  trailFrameLength: 3
-  colour: {r: 1, g: 0, b: 0, a: 1}
-  forceAppliedToCut: 3
+  tip: {fileID: 6251718529625361016}
+  _base: {fileID: 8304405688132069216}
+  forceAppliedToCut: 10
 --- !u!1 &6251718529625361016
 GameObject:
   m_ObjectHideFlags: 0

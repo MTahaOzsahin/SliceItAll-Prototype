@@ -92,6 +92,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
 
             var rb = gameObject.AddComponent<Rigidbody>();
             rb.useGravity = useGravity;
+            rb.AddForce((Vector3.down + Physics.gravity) * Time.fixedDeltaTime);
         }
     }
 }

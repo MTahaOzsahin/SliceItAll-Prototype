@@ -498,7 +498,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
         }
 
         /// <summary>
-        /// Casts a reay from vertex1 to vertex2 and gets the point of intersection with the plan, calculates the new uv as well.
+        /// Casts a ray from vertex1 to vertex2 and gets the point of intersection with the plan, calculates the new uv as well.
         /// </summary>
         /// <param name="plane">The plane.</param>
         /// <param name="vertex1">The vertex1.</param>

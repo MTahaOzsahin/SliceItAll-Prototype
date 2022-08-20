@@ -20,17 +20,17 @@ namespace SliceItAll.Scripts.Controllers
                 area = Area.Up;
                 return 0;
             }
-            else if (dotForward > 0.45f)
+            else if (dotForward > 0.75f)
             {
                 area = Area.Right;
                 return 1;
             }
-            else if (dotUp < -0.45f)
+            else if (dotUp < -0.15f)
             {
                 area = Area.Down;
                 return 2;
             }
-            else if (dotForward < -0.45f)
+            else if (dotForward < -0.75f)
             {
                 area = Area.Left;
                 return 3;

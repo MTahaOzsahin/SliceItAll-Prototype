@@ -41,16 +41,10 @@ namespace SliceItAll.Scripts.GamePlay
 
         public IEnumerator StappedCoroutine()
         {
-            float timeElapsed = 0f;
-            while (timeElapsed < 0.5f)
-            {
-                timeElapsed += Time.deltaTime;
-                //rb.AddTorque(entity.transform.right * moverPhysicVariables.rotateForce * 1000f * Time.fixedDeltaTime);
-                rb.AddForce(Vector3.up * moverPhysicVariables.stappedMovement * Time.fixedDeltaTime);
-                rb.angularVelocity = (Vector3.forward * moverPhysicVariables.stappedMovement * Time.fixedDeltaTime);
-            }
+            rb.velocity = Vector3.zero;
+            rb.AddForce(Vector3.up * moverPhysicVariables.stappedMovement* 1000f * Time.fixedDeltaTime);
+            rb.AddForce(Vector3.back * moverPhysicVariables.stappedMovement* 50f * Time.fixedDeltaTime);
             yield return null;
-           
         }
     }
 }
