@@ -155,8 +155,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.096416295, y: 0.049134254, z: 2.7843816}
-  m_Center: {x: -0.008003533, y: -0.03260517, z: 1.5768958}
+  m_Size: {x: 0.02, y: 0.26, z: 2.7843816}
+  m_Center: {x: 0, y: -0.03260517, z: 1.5768958}
 --- !u!65 &3894025238694481147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -168,8 +168,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14918542, y: 0.34361398, z: 1.508806}
-  m_Center: {x: 0.0027739964, y: 0.016025156, z: -0.6042142}
+  m_Size: {x: 0.02, y: 0.34361398, z: 1.508806}
+  m_Center: {x: 0, y: 0.016025156, z: -0.6042142}
 --- !u!114 &905027281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389b17ad3e761be43b8eda6a303495aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePhysicVariables: {fileID: 11400000, guid: 6fc4caf9497ee9c45b29bf0201044b4f, type: 2}
+  moverPhysicVariables: {fileID: 0}
   inputAction:
     m_Name: Input
     m_Type: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ecbc803b9b7a447905acb62bb87be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   tip: {fileID: 6251718529625361016}
   _base: {fileID: 8304405688132069216}
   forceAppliedToCut: 10

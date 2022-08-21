@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff17614d8aa142643a244d76e9f9142a, type: 3}
   m_Name: MoverPhysicVariables
   m_EditorClassIdentifier: 
-  rotateForce: 10
-  elevationForce: 250
-  movementForce: 50
+  rotateForce: 20
+  elevationForce: 300
+  movementForce: 200
   lerpValue: 0
   maxAngularVelocity: 25
   angularDrag: 0

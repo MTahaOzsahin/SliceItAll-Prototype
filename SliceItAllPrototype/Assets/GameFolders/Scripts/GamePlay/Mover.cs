@@ -28,9 +28,9 @@ namespace SliceItAll.Scripts.GamePlay
         {
             rb.velocity = Vector3.zero;
             float timeElapsed = 0f;
-            while (timeElapsed < 0.3f)
+            while (timeElapsed < 0.9f)
             {
-                timeElapsed += Time.deltaTime;
+                timeElapsed += Time.fixedDeltaTime;
                 rb.AddTorque(entity.transform.right * moverPhysicVariables.rotateForce * 1000f * Time.fixedDeltaTime);
 
                 rb.AddForce(Vector3.up * moverPhysicVariables.elevationForce  * Time.fixedDeltaTime);
@@ -44,6 +44,7 @@ namespace SliceItAll.Scripts.GamePlay
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * moverPhysicVariables.stappedMovement* 1000f * Time.fixedDeltaTime);
             rb.AddForce(Vector3.back * moverPhysicVariables.stappedMovement* 50f * Time.fixedDeltaTime);
+
             yield return null;
         }
     }

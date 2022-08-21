@@ -16,7 +16,7 @@ namespace SliceItAll.Scripts.Managers
 
         private void OnEnable()
         {
-            currentScore = 0;
+            scoreChangeEvent?.Invoke(currentScore);
             if (scoreChangeEvent == null)
             {
                 scoreChangeEvent = new UnityEvent<int>();
