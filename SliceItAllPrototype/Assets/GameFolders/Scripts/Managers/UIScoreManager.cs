@@ -15,6 +15,10 @@ namespace SliceItAll.Scripts.Managers
         {
             scoreText = GetComponent<TextMeshProUGUI>();
         }
+        private void Start()
+        {
+            ChangeScore(scoreManager.currentScore);
+        }
         private void OnEnable()
         {
             scoreManager.scoreChangeEvent.AddListener(ChangeScore);

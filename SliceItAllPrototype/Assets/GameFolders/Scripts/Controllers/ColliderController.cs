@@ -17,7 +17,7 @@ namespace SliceItAll.Scripts.Controllers
             {
                 IsCollideWithFloor = true;
             }
-            if (collision.collider != null && collision.gameObject.GetComponent<Sliceable>() != null)
+            if (collision.collider != null && collision.gameObject.GetComponent<BaseSliceable>() != null)
             {
                 CollideWithSliceable?.Invoke();
             }

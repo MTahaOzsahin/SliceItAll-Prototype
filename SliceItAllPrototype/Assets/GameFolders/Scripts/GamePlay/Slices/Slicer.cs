@@ -20,7 +20,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
             //Get the current mesh and its verts and tris
             Mesh mesh = objectToCut.GetComponent<MeshFilter>().mesh;
             var a = mesh.GetSubMesh(0);
-            Sliceable sliceable = objectToCut.GetComponent<Sliceable>();
+            BaseSliceable sliceable = objectToCut.GetComponent<BaseSliceable>();
 
             if (sliceable == null)
             {
@@ -58,11 +58,11 @@ namespace SliceItAll.Scripts.GamePlay.Slices
             var originalMaterial = originalObject.GetComponent<MeshRenderer>().materials;
 
             GameObject meshGameObject = new GameObject();
-            Sliceable originalSliceable = originalObject.GetComponent<Sliceable>();
+            BaseSliceable originalSliceable = originalObject.GetComponent<BaseSliceable>();
 
             meshGameObject.AddComponent<MeshFilter>();
             meshGameObject.AddComponent<MeshRenderer>();
-            Sliceable sliceable = meshGameObject.AddComponent<Sliceable>();
+            BaseSliceable sliceable = meshGameObject.AddComponent<BaseSliceable>();
 
             sliceable.IsSolid = originalSliceable.IsSolid;
             sliceable.ReverseWireTriangles = originalSliceable.ReverseWireTriangles;

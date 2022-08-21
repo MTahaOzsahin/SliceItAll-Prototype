@@ -10,7 +10,6 @@ namespace SliceItAll.Scripts.FSM.Actions
     {
         public override void MainExecute(StateController stateController)
         {
-            Debug.Log("Stepped");
             var rb = stateController.GetComponent<Rigidbody>();
             Physics.gravity = new Vector3(0f, -9.8f, 0f);
             rb.maxAngularVelocity = basePhysicVariables.maxAngularVelocity;

@@ -8,7 +8,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
     /// Thanks and credits to: https://github.com/Tvtig/UnityLightsaber
     /// </summary>
 
-    public class Sliceable : MonoBehaviour
+    public class BaseSliceable : MonoBehaviour
     {
         [Tooltip("How much score will gain when slice this object")]
         public int score;

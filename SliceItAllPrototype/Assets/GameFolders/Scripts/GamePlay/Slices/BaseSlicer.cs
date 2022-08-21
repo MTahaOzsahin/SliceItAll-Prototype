@@ -8,9 +8,10 @@ namespace SliceItAll.Scripts.GamePlay.Slices
     /// <summary>
     /// Thanks and credits to: https://github.com/Tvtig/UnityLightsaber
     /// </summary>
-    public class Knife : MonoBehaviour
+    public class BaseSlicer : MonoBehaviour
     {
         [SerializeField] ScoreManager scoreManager;
+        int endLevelSliceScore;
 
         [SerializeField, Tooltip("The empty game object located at the tip of the blade")]
         GameObject tip = null;
@@ -30,6 +31,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
 
         private void Start()
         {
+            endLevelSliceScore = 0;
             //Set starting position for tip and base
             previousTipPosition = tip.transform.position;
             previousBasePosition = _base.transform.position;
@@ -42,14 +44,14 @@ namespace SliceItAll.Scripts.GamePlay.Slices
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<Sliceable>() == null) return;
+            if (other.gameObject.GetComponent<BaseSliceable>() == null) return;
             triggerEnterTipPosition = tip.transform.position;
             triggerEnterBasePosition = _base.transform.position;
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.GetComponent<Sliceable>() == null) return;
+            if (other.gameObject.GetComponent<BaseSliceable>() == null) return;
             triggerExitTipPosition = tip.transform.position;
 
             //Create a triangle between the tip and base so that we can get the normal
@@ -88,7 +90,9 @@ namespace SliceItAll.Scripts.GamePlay.Slices
 
             rigidbodyPositive.velocity = new Vector3(-1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
             rigidbodyNegative.velocity = new Vector3(1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
-            scoreManager.HandleScore(other.gameObject.GetComponent<Sliceable>().score,other.gameObject.transform.position);
+            endLevelSliceScore += other.gameObject.GetComponent<BaseSliceable>().score;
+            scoreManager.EndLevelScore(endLevelSliceScore);
+            scoreManager.HandleScore(other.gameObject.GetComponent<BaseSliceable>().score,other.gameObject.transform.position);
         }
     }
 }

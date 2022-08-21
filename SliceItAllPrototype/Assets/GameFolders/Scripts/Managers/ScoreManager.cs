@@ -9,6 +9,7 @@ namespace SliceItAll.Scripts.Managers
     public class ScoreManager : ScriptableObject
     {
         public int currentScore;
+        public int _endLevelScore;
 
         [System.NonSerialized]
         public UnityEvent<int> scoreChangeEvent;
@@ -16,7 +17,6 @@ namespace SliceItAll.Scripts.Managers
 
         private void OnEnable()
         {
-            scoreChangeEvent?.Invoke(currentScore);
             if (scoreChangeEvent == null)
             {
                 scoreChangeEvent = new UnityEvent<int>();
@@ -27,6 +27,10 @@ namespace SliceItAll.Scripts.Managers
             currentScore += amount;
             scoreChangeEvent?.Invoke(currentScore);
             popScoreEvent?.Invoke(amount,position);
+        }
+        public void EndLevelScore(int endLevelScore)
+        {
+            _endLevelScore = endLevelScore;
         }
     }
 }

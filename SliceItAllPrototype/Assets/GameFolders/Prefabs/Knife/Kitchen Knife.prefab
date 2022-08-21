@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 905027275}
   - component: {fileID: 905027280}
   - component: {fileID: 3314778601555406112}
+  - component: {fileID: 905027282}
   m_Layer: 0
   m_Name: Kitchen Knife
   m_TagString: Untagged
@@ -182,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389b17ad3e761be43b8eda6a303495aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moverPhysicVariables: {fileID: 0}
+  moverPhysicVariables: {fileID: 11400000, guid: 6fc4caf9497ee9c45b29bf0201044b4f, type: 2}
   inputAction:
     m_Name: Input
     m_Type: 0
@@ -250,10 +251,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ecbc803b9b7a447905acb62bb87be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 11400000, guid: 48cba03fe651fcd4e94210d4527d103d, type: 2}
   tip: {fileID: 6251718529625361016}
   _base: {fileID: 8304405688132069216}
-  forceAppliedToCut: 10
+  forceAppliedToCut: 8
+--- !u!114 &905027282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1c47cb1ce65664699b1d70029052ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6251718529625361016
 GameObject:
   m_ObjectHideFlags: 0
