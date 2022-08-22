@@ -12,6 +12,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
     public class BaseSlicer : MonoBehaviour
     {
         [SerializeField] ScoreManager scoreManager;
+        [SerializeField] SoundManager soundManager;
         int endLevelSliceScore;
 
         [SerializeField, Tooltip("The empty game object located at the tip of the blade")]
@@ -49,6 +50,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
             {
                 triggerEnterTipPosition = tip.transform.position;
                 triggerEnterBasePosition = _base.transform.position;
+                soundManager.SlicingSound(this.gameObject.GetComponent<AudioSource>());
             }
             if (other.gameObject.GetComponent<EndLevelController>() != null)
             {

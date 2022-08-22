@@ -1,5 +1,6 @@
 using SliceItAll.Scripts.GamePlay;
 using SliceItAll.Scripts.Interfaces;
+using SliceItAll.Scripts.Managers;
 using SliceItAll.Scripts.Physic;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace SliceItAll.Scripts.Controllers
 {
     public class KnifeController : MonoBehaviour, IEntity
     {
+        [SerializeField] SoundManager soundsManager;
+        AudioSource audioSource;
         IMover mover;
         ColliderController colliderController;
         DistanceController distanceController;
@@ -25,17 +28,22 @@ namespace SliceItAll.Scripts.Controllers
             colliderController = GetComponent<ColliderController>();
             distanceController = GetComponent<DistanceController>();
             mover = new Mover(this,moverPhysicVariables, rb);
+            audioSource = GetComponent<AudioSource>();
         }
         private void OnEnable()
         {
             inputAction.Enable();
             inputAction.started += MoveAction;
+            inputAction.started += PLayTappingSound;
             colliderController.CollideWithSliceable += StepBack;
+            colliderController.CollideWithSliceable += PlayStuckSound;
         }
         private void OnDisable()
         {
             inputAction.started -= MoveAction;
+            inputAction.started -= PLayTappingSound;
             colliderController.CollideWithSliceable -= StepBack;
+            colliderController.CollideWithSliceable -= PlayStuckSound;
             inputAction.Disable();
         }
 
@@ -53,6 +61,14 @@ namespace SliceItAll.Scripts.Controllers
         void StepBack()
         {
             StartCoroutine(mover.StappedCoroutine());
+        }
+        void PLayTappingSound(InputAction.CallbackContext context)
+        {
+            soundsManager.TappingSound(audioSource);
+        }
+        void PlayStuckSound()
+        {
+            soundsManager.StuckSound(audioSource);
         }
     }
 }

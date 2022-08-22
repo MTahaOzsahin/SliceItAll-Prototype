@@ -32,7 +32,7 @@ namespace SliceItAll.Scripts.Managers
             Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, position);
             Canvas canvas = _popScoreGameobject.GetComponentInParent<Canvas>();
             RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
-            rectTransform.anchoredPosition3D = screenPoint - canvasRectTransform.sizeDelta / 5;
+            rectTransform.anchoredPosition3D = screenPoint - canvasRectTransform.sizeDelta / 2;
 
             yield return new WaitForEndOfFrame();
             TextMeshProUGUI _scoreText = _popScoreGameobject.GetComponentInChildren<TextMeshProUGUI>();

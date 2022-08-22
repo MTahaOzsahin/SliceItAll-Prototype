@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EndLevel.unity
     guid: 29308404aa728f44c97a1133293b2b1b
   - enabled: 1
+    path: Assets/Scenes/DeadLevel.unity
+    guid: 73e85d80382828649a89470a4e500e32
+  - enabled: 1
     path: Assets/Scenes/WorkStation.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

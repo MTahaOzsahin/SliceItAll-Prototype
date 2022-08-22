@@ -1,16 +1,24 @@
 -----------------------Will Add----------------------------------
-Trail effect.
 
-EndLevel Anim.
-Sounds.
 Levels
 
 ------------------------On Going---------------------------------
 
 -----------------------Need Fix----------------------------------
 Knife physics. 
-PopScore location on builds is wrong.
+PopScore location on builds is wrong. //Will test
 -----------------------Completed----------------------------------
 Will add fake gravity when not thouching floor.
 score multiplier.
 EndLevelScore will add to TotalScore.
+Trail effect.
+EndBox textures.
+Dead Zones.
+EndLevel score Anim.
+Sounds. 
+{
+20 19 39 for cutting
+44 for bump
+46 for tapping
+18 for endLEvel
+}

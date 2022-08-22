@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66286489e5eb554f9b539e67e4ac207, type: 3}
   m_Name: ScoreManager
   m_EditorClassIdentifier: 
-  currentScore: 0
-  _endLevelScore: 300
+  currentScore: 12000
+  _endLevelScore: 0
   popScoreEvent:
     m_PersistentCalls:
       m_Calls: []
