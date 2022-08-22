@@ -28,9 +28,14 @@ namespace SliceItAll.Scripts.Managers
             scoreChangeEvent?.Invoke(currentScore);
             popScoreEvent?.Invoke(amount,position);
         }
-        public void EndLevelScore(int endLevelScore)
+        public void EndLevelScore(int endLevelScore,int scoreMultiplier)
         {
             _endLevelScore = endLevelScore;
+            _endLevelScore = _endLevelScore * scoreMultiplier;
+        }
+        public void GetTotalScore()
+        {
+            currentScore += _endLevelScore; 
         }
     }
 }

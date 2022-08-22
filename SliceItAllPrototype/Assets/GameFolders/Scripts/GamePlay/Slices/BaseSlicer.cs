@@ -1,3 +1,4 @@
+using SliceItAll.Scripts.Controllers.EndLevelController;
 using SliceItAll.Scripts.Managers;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,9 +45,16 @@ namespace SliceItAll.Scripts.GamePlay.Slices
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<BaseSliceable>() == null) return;
-            triggerEnterTipPosition = tip.transform.position;
-            triggerEnterBasePosition = _base.transform.position;
+            if (other.gameObject.GetComponent<BaseSliceable>() != null) 
+            {
+                triggerEnterTipPosition = tip.transform.position;
+                triggerEnterBasePosition = _base.transform.position;
+            }
+            if (other.gameObject.GetComponent<EndLevelController>() != null)
+            {
+                int scoreMultiplier = other.gameObject.GetComponent<EndLevelController>().ScoreMultiplier;
+                scoreManager.EndLevelScore(endLevelSliceScore, scoreMultiplier);
+            }
         }
 
         private void OnTriggerExit(Collider other)
@@ -91,7 +99,7 @@ namespace SliceItAll.Scripts.GamePlay.Slices
             rigidbodyPositive.velocity = new Vector3(-1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
             rigidbodyNegative.velocity = new Vector3(1f * forceAppliedToCut, 0f * forceAppliedToCut, 0f);
             endLevelSliceScore += other.gameObject.GetComponent<BaseSliceable>().score;
-            scoreManager.EndLevelScore(endLevelSliceScore);
+            scoreManager.EndLevelScore(endLevelSliceScore,1);
             scoreManager.HandleScore(other.gameObject.GetComponent<BaseSliceable>().score,other.gameObject.transform.position);
         }
     }

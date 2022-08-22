@@ -1,6 +1,16 @@
 -----------------------Will Add----------------------------------
-Wİll add fake gravity when not thouching floor.
+Trail effect.
+
+EndLevel Anim.
+Sounds.
+Levels
+
+------------------------On Going---------------------------------
+
 -----------------------Need Fix----------------------------------
 Knife physics. 
-
+PopScore location on builds is wrong.
 -----------------------Completed----------------------------------
+Will add fake gravity when not thouching floor.
+score multiplier.
+EndLevelScore will add to TotalScore.

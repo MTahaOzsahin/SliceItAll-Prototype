@@ -40,7 +40,7 @@ namespace SliceItAll.Scripts.Managers
         }
         public void EndLevelScene()
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 0;
             SceneManager.LoadSceneAsync("EndLevel", LoadSceneMode.Additive);
         }
     }
