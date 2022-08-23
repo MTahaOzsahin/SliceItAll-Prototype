@@ -16,3 +16,4 @@ MonoBehaviour:
   sliceSound: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
   stuckSound: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
   endLevelSound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+  deadLevelSound: {fileID: 8300000, guid: ff5f85da24bc943d1abdc5760a22bc81, type: 3}

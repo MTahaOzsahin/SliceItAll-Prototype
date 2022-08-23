@@ -7,7 +7,7 @@ namespace SliceItAll.Scripts.Controllers.EndLevelController
 {
     public class EndLevelController : MonoBehaviour
     {
-        [SerializeField] SceneManager gameManager;
+        [SerializeField] SceneManager sceneManager;
         [SerializeField] ScoreManager scoreManager;
         [SerializeField] SoundManager soundManager;
 
@@ -24,10 +24,10 @@ namespace SliceItAll.Scripts.Controllers.EndLevelController
         IEnumerator EndLevelCoroutine(Collider collider )
         {
             collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            soundManager.EndLevelSound(this.gameObject.GetComponent<AudioSource>());
+            soundManager.EndLevelSound(this.gameObject.AddComponent<AudioSource>());
             scoreManager.GetTotalScore();
             yield return new WaitForEndOfFrame();
-            gameManager.EndLevelScene();
+            sceneManager.EndLevelScene();
             yield return null;
         }
     }

@@ -18,6 +18,9 @@ namespace SliceItAll.Scripts.Managers
 
         [Tooltip("The sound for end level")]
         [SerializeField] AudioClip endLevelSound;
+
+        [Tooltip("The sound for when player failed.")]
+        [SerializeField] AudioClip deadLevelSound;
         
         public void TappingSound(AudioSource audioSource)
         {
@@ -34,6 +37,10 @@ namespace SliceItAll.Scripts.Managers
         public void EndLevelSound(AudioSource audioSource)
         {
             audioSource.PlayOneShot(endLevelSound);
+        }
+        public void DeadLevelSound(AudioSource audioSource)
+        {
+            audioSource.PlayOneShot(deadLevelSound);
         }
     }
 }

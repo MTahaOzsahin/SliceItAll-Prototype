@@ -6,7 +6,7 @@ Levels
 
 -----------------------Need Fix----------------------------------
 Knife physics. 
-PopScore location on builds is wrong. //Will test
+
 -----------------------Completed----------------------------------
 Will add fake gravity when not thouching floor.
 score multiplier.
@@ -15,7 +15,8 @@ Trail effect.
 EndBox textures.
 Dead Zones.
 EndLevel score Anim.
-Sounds. 
+Sounds.
+PopScore location on builds is wrong. //Fixed. 
 {
 20 19 39 for cutting
 44 for bump
