@@ -42,7 +42,7 @@ namespace SliceItAll.Scripts.GamePlay
         public IEnumerator StappedCoroutine()
         {
             rb.velocity = Vector3.zero;
-            rb.AddForce(Vector3.up * moverPhysicVariables.stappedMovement* 1000f * Time.fixedDeltaTime);
+            rb.AddForce(Vector3.up * moverPhysicVariables.stappedMovement* 1200f * Time.fixedDeltaTime);
             rb.AddForce(Vector3.back * moverPhysicVariables.stappedMovement* 50f * Time.fixedDeltaTime);
 
             yield return null;

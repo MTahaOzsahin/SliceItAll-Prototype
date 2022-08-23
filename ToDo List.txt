@@ -1,12 +1,11 @@
 -----------------------Will Add----------------------------------
 
-Levels
+
 
 ------------------------On Going---------------------------------
-
+Levels
 -----------------------Need Fix----------------------------------
 Knife physics. 
-
 -----------------------Completed----------------------------------
 Will add fake gravity when not thouching floor.
 score multiplier.

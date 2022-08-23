@@ -9,7 +9,7 @@ namespace SliceItAll.Scripts.Controllers
         [SerializeField]LayerMask layerMask;
         public bool DistanceToBelow()
         {
-            if (Physics.Raycast(transform.position, Vector3.down, 2f, layerMask))
+            if (Physics.Raycast(transform.position, Vector3.down, 2.5f, layerMask))
             {
                  return true;   
             }
@@ -18,7 +18,7 @@ namespace SliceItAll.Scripts.Controllers
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawRay(transform.position, Vector3.down * 2f);
+            Gizmos.DrawRay(transform.position, Vector3.down * 2.5f);
         }
     }
 }

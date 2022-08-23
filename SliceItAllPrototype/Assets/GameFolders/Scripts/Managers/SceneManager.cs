@@ -35,8 +35,15 @@ namespace SliceItAll.Scripts.Managers
                 Scene scene = UnityEngine.SceneManagement.SceneManager.GetSceneAt(i);
                 UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(scene);
             }
-            if (currentLevelIndex == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings) return;
+            if (currentLevelIndex + 2 == UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("ThanksLevel", LoadSceneMode.Additive);
+            }
             UnityEngine.SceneManagement.SceneManager.LoadScene(currentLevelIndex, LoadSceneMode.Single);
+        }
+        public void GoToLevel(int levelIndex)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(levelIndex - 1, LoadSceneMode.Single);
         }
         public void EndLevelScene()
         {

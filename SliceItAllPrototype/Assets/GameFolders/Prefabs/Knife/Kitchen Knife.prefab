@@ -98,8 +98,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6133396189899415547}
   - component: {fileID: 7958956405708501276}
-  - component: {fileID: 3308768800752062634}
   - component: {fileID: 3894025238694481147}
+  - component: {fileID: 3308768800752062634}
   - component: {fileID: 905027281}
   - component: {fileID: 905027274}
   - component: {fileID: 905027275}
@@ -146,19 +146,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 98
   m_CollisionDetection: 3
---- !u!65 &3308768800752062634
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5821585389471052830}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.26, z: 2.7843816}
-  m_Center: {x: 0, y: -0.03260517, z: 1.5768958}
 --- !u!65 &3894025238694481147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,8 +157,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.34361398, z: 1.508806}
-  m_Center: {x: 0, y: 0.016025156, z: -0.6042142}
+  m_Size: {x: 0.02, y: 0.37682107, z: 1.5048769}
+  m_Center: {x: 0, y: -0.0005783886, z: -0.6061796}
+--- !u!65 &3308768800752062634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821585389471052830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.15725255, z: 2.563639}
+  m_Center: {x: 0, y: -0.26, z: 1.6872672}
 --- !u!114 &905027281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389b17ad3e761be43b8eda6a303495aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundsManager: {fileID: 11400000, guid: 02ee09c46cc5fdb439e49d72dc762da8, type: 2}
   moverPhysicVariables: {fileID: 11400000, guid: 6fc4caf9497ee9c45b29bf0201044b4f, type: 2}
   inputAction:
     m_Name: Input
@@ -253,9 +254,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 11400000, guid: 48cba03fe651fcd4e94210d4527d103d, type: 2}
+  soundManager: {fileID: 11400000, guid: 02ee09c46cc5fdb439e49d72dc762da8, type: 2}
   tip: {fileID: 6251718529625361016}
   _base: {fileID: 8304405688132069216}
-  forceAppliedToCut: 8
+  forceAppliedToCut: 10
 --- !u!114 &905027282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,9 +283,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -202,8 +202,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: a874f59c198744c4e82116158a346544, type: 2}
-        m_TargetAssemblyTypeName: SliceItAll.Scripts.Managers.GameManager, Assembly-CSharp
-        m_MethodName: RestartLevel
+        m_TargetAssemblyTypeName: SliceItAll.Scripts.Managers.SceneManager, Assembly-CSharp
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
