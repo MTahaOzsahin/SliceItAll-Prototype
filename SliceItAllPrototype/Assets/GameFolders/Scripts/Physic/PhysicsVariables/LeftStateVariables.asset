@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5028d54081308ef4fb1d367e09dc18c5, type: 3}
   m_Name: LeftStateVariables
   m_EditorClassIdentifier: 
-  rotateForce: 60
+  rotateForce: 70
   elevationForce: 0
   movementForce: 0
   lerpValue: 0

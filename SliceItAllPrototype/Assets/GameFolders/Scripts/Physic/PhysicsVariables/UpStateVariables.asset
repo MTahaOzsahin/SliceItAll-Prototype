@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f5914e55a9e744bf96bd374de90d1, type: 3}
   m_Name: UpStateVariables
   m_EditorClassIdentifier: 
-  rotateForce: 60
+  rotateForce: 70
   elevationForce: 0
   movementForce: 0
   lerpValue: 0

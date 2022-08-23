@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8537599546519702390}
   - component: {fileID: 4743554953012364499}
   - component: {fileID: 7363536371749236761}
-  - component: {fileID: 1469374846264771855}
   - component: {fileID: 5462310390092597963}
   - component: {fileID: 8687049667229605035}
+  - component: {fileID: 628739523450949491}
   m_Layer: 0
   m_Name: SliceableMushroom
   m_TagString: Untagged
@@ -89,20 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1469374846264771855
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9020838839130231244}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3028908797848076131, guid: eb20c7ae5622ca9409ebad48b03d9367, type: 3}
 --- !u!114 &5462310390092597963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +119,20 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &628739523450949491
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020838839130231244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4102635, y: 0.0515414, z: 0.15826444}
+  m_Center: {x: 0.00000007152558, y: 0.2607154, z: -0.01414218}

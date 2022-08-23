@@ -7,10 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 787737586131201666, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 24890fdc60096a040a3f258ad78b48c7, type: 2}
     - target: {fileID: 1292083775106010967, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
       propertyPath: m_Name
       value: SliceableStone
@@ -18,18 +14,6 @@ PrefabInstance:
     - target: {fileID: 1920143081614415341, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920143081614415341, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920143081614415341, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1920143081614415341, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1920143081614415341, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,28 +55,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 548316940955487728, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
 --- !u!1 &9084616222512850526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1292083775106010967, guid: 3b3d58d96052de8489ed4d34b72fcf08, type: 3}
   m_PrefabInstance: {fileID: 8069726003152054537}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5219032342037485628
-MonoBehaviour:
+--- !u!54 &7145828822431291075
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9084616222512850526}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6929980930007159321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084616222512850526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71b0bde06ddf5449ba709cb7e086b7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 100
-  isSolid: 1
-  reverseWindTriangles: 0
-  useGravity: 1
-  shareVertices: 1
-  smoothVertices: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0160073, y: 0.19066542, z: 1.0160073}
+  m_Center: {x: 0.00000009934107, y: 1.7334808, z: 0.00000014901161}

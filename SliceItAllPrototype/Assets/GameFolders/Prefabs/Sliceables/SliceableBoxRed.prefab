@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7621474304825886488}
   - component: {fileID: 7621474304825886495}
   - component: {fileID: 7621474304825886494}
-  - component: {fileID: 7621474304825886493}
   - component: {fileID: 7621474304825886492}
   - component: {fileID: 141386013}
+  - component: {fileID: 1252434574412492651}
   m_Layer: 0
   m_Name: SliceableBoxRed
   m_TagString: Untagged
@@ -86,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7621474304825886493
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7621474304825886483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8129463557306821596, guid: af06b1de7da9c1645aa930a6445c5f92, type: 3}
 --- !u!114 &7621474304825886492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +116,20 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!65 &1252434574412492651
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621474304825886483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4670313, y: 0.058921814, z: 1.868118}
+  m_Center: {x: 0.00000009536743, y: 0.43756574, z: 0.00000013245476}

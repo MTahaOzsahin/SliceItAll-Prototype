@@ -3,8 +3,8 @@
 
 
 ------------------------On Going---------------------------------
-Levels
------------------------Need Fix----------------------------------
+
+-----------------------Need Adjustment----------------------------------
 Knife physics. 
 -----------------------Completed----------------------------------
 Will add fake gravity when not thouching floor.
@@ -14,8 +14,9 @@ Trail effect.
 EndBox textures.
 Dead Zones.
 EndLevel score Anim.
-Sounds.
+Levels.
 PopScore location on builds is wrong. //Fixed. 
+Sounds
 {
 20 19 39 for cutting
 44 for bump

@@ -130,14 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2034286878371343779, guid: 88f54d05f1d3cfe4d9d019134ee0436f, type: 3}
-      propertyPath: countFPS
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2034286878371343779, guid: 88f54d05f1d3cfe4d9d019134ee0436f, type: 3}
-      propertyPath: duration
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8010447373294086573, guid: 88f54d05f1d3cfe4d9d019134ee0436f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

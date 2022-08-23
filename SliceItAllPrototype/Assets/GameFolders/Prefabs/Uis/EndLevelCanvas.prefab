@@ -887,7 +887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 11400000, guid: 48cba03fe651fcd4e94210d4527d103d, type: 2}
   endScoreText: {fileID: 8010447372693603708}
-  countFPS: 30
+  countFPS: 60
   duration: 1
   numberFormat: N0
 --- !u!1 &8010447373394683088

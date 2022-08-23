@@ -38,6 +38,7 @@ namespace SliceItAll.Scripts.Controllers
                 rb.velocity = Vector3.zero;
                 rb.angularDrag = 25f;
                 rb.useGravity = false;
+                IsCollideWithFloor = true;
             }
         }
         private void OnTriggerExit(Collider other)
@@ -45,6 +46,7 @@ namespace SliceItAll.Scripts.Controllers
             if (other != null && other.CompareTag("Floor"))
             {
                 rb.useGravity = true;
+                IsCollideWithFloor = false;
             }
         }
     }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb22d82ea561752478be7b3ccdf8fb85, type: 3}
+  m_Name: KnifeManager
+  m_EditorClassIdentifier: 
+  knifes:
+  - {fileID: 6915403859655646131, guid: 9d0e117b089adc048a562921cd475f96, type: 3}
+  - {fileID: 2740187908471315278, guid: 657f908233480f846b3bdb585754ffdd, type: 3}
+  - {fileID: 444630026184266700, guid: ce512f7d9066e5c4f8e259cd649fe5be, type: 3}
+  - {fileID: 8153265621967627873, guid: 10a12a4b1ab2ab8469ca589ae33e2b76, type: 3}
+  - {fileID: 2522721760857550437, guid: d9f942d2bc47b3242903a8b91306d4c8, type: 3}
+  - {fileID: 5821585389471052830, guid: 6b7ea535e12d46a4f8f8ad12b0f1041c, type: 3}
+  - {fileID: 5512728248763008893, guid: 0adcfb10244c0d04aabf13ef3491bd8a, type: 3}
+  - {fileID: 672331210077593324, guid: cb2e286315bb3374da571a80b41f526f, type: 3}
+  - {fileID: 7966922361223225025, guid: 141a86c1881005544821e48f185a8788, type: 3}
+  - {fileID: 2378209870179368566, guid: b10346eae6543d144aa5d9e610d523e6, type: 3}

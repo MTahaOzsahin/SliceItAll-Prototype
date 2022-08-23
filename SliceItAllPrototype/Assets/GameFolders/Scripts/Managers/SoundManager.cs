@@ -9,38 +9,43 @@ namespace SliceItAll.Scripts.Managers
     {
         [Tooltip("The sound for when player tap.")]
         [SerializeField] AudioClip tappingSound;
+        [SerializeField,Range(0f,1f)] float tappingSoundVolume;
 
         [Tooltip("The sound for when slicing.")]
         [SerializeField] AudioClip sliceSound;
+        [SerializeField, Range(0f, 1f)] float sliceSoundVolume;
 
         [Tooltip("The sound for when knife touch floor or sliceable objects with base.")]
-        [SerializeField] AudioClip stuckSound;
+        [SerializeField] AudioClip hitSound;
+        [SerializeField, Range(0f, 1f)] float hitSoundVolume;
 
         [Tooltip("The sound for end level")]
         [SerializeField] AudioClip endLevelSound;
+        [SerializeField, Range(0f, 1f)] float endLevelSoundVolume;
 
         [Tooltip("The sound for when player failed.")]
         [SerializeField] AudioClip deadLevelSound;
-        
+        [SerializeField, Range(0f, 1f)] float deadLevelSoundVolume;
+
         public void TappingSound(AudioSource audioSource)
         {
-            audioSource.PlayOneShot(tappingSound);
+            audioSource.PlayOneShot(tappingSound,tappingSoundVolume);
         }
         public void SlicingSound(AudioSource audioSource)
         {
-            audioSource.PlayOneShot(sliceSound);
+            audioSource.PlayOneShot(sliceSound,sliceSoundVolume);
         }
         public void StuckSound(AudioSource audioSource)
         {
-            audioSource.PlayOneShot(stuckSound);
+            audioSource.PlayOneShot(hitSound, hitSoundVolume);
         }
         public void EndLevelSound(AudioSource audioSource)
         {
-            audioSource.PlayOneShot(endLevelSound);
+            audioSource.PlayOneShot(endLevelSound, endLevelSoundVolume);
         }
         public void DeadLevelSound(AudioSource audioSource)
         {
-            audioSource.PlayOneShot(deadLevelSound);
+            audioSource.PlayOneShot(deadLevelSound, deadLevelSoundVolume);
         }
     }
 }
