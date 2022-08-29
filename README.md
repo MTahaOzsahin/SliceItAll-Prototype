@@ -2,7 +2,7 @@
  The game "Slice It All!" prototype 
 
   States Description : 
-States names asically came from knife's rotation on scene. 
+States names basically came from knife's rotation on scene. 
 If knifes tip looking up thats mean knife is in UpState, if looking left is LeftState.
 
 
